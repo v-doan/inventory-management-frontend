@@ -15,12 +15,12 @@ function App() {
   const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/products')
+    fetch('https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching products:', error));
 
-    fetch('http://localhost:8080/api/ingredients')
+    fetch('https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/ingredients')
       .then(response => response.json())
       .then(data => setIngredients(data))
       .catch(error => console.error('Error fetching ingredients:', error));

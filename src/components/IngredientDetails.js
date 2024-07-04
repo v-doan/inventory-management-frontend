@@ -9,7 +9,7 @@ const IngredientDetails = ({ ingredientId }) => {
     if (ingredientId) {
       setLoading(true);
       setError(null);
-      fetch(`http://localhost:8080/api/ingredients/${ingredientId}/products`)
+      fetch(`https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/ingredients/${ingredientId}/products`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch ingredient details');
