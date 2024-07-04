@@ -1,6 +1,47 @@
-# Getting Started with Create React App
+# Inventory Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An inventory management system built with Spring Boot for the backend and React for the frontend. This application allows users to manage products and their ingredients.
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [License](#license)
+- [Contributing](#contributing)
+
+## Features
+
+- Add, update, and delete products
+- Manage ingredients for each product
+- View a list of all products and their ingredients
+
+## Tech Stack
+
+- Backend: Spring Boot, JPA, Hibernate
+- Frontend: React, Tailwind CSS
+- Database: MySQL
+- Deployment: Heroku
+
+## Installation
+
+### Prerequisites
+
+- Java 11 or higher
+- Node.js and npm
+- MySQL
+
+### Backend
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/inventory-management.git
+   cd inventory-management/backend
+
 
 ## Available Scripts
 
