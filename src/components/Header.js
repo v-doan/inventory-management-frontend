@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../images/logo.png'; // Update the path to your logo image
+import logo from '../images/logo.png'; 
 
 const Header = () => {
   const [isHoveringContact, setIsHoveringContact] = useState(false);
@@ -8,7 +8,7 @@ const Header = () => {
     <div className="bg-white text-black shadow">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src={logo} alt="Company Logo" className="h-20 w-25 mr-3" /> {/* Increased the size of the logo */}
+          <img src={logo} alt="Company Logo" className="h-20 w-25 mr-3" /> 
         </div>
         <div className="flex space-x-4">
           <button

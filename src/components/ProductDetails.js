@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import BASE_URL from '../config';
 
 const ProductDetails = ({ productId, productName, onClose }) => {
   const [ingredients, setIngredients] = useState([]);
@@ -10,7 +11,7 @@ const ProductDetails = ({ productId, productName, onClose }) => {
     if (productId) {
       setLoading(true);
       setError(null);
-      fetch(`https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/products/${productId}/ingredients`)
+      fetch(`${BASE_URL}/products/${productId}/ingredients`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch product details');
@@ -33,7 +34,7 @@ const ProductDetails = ({ productId, productName, onClose }) => {
   const handleAddIngredient = useCallback(() => {
     if (!newIngredient.trim()) return;
 
-    fetch(`https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/products/${productId}/ingredients`, {
+    fetch(`${BASE_URL}/products/${productId}/ingredients`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -66,7 +67,7 @@ const ProductDetails = ({ productId, productName, onClose }) => {
   }, [handleAddIngredient]);
 
   const handleDeleteIngredient = (ingredientId) => {
-    fetch(`https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/products/${productId}/ingredients/${ingredientId}`, {
+    fetch(`${BASE_URL}/products/${productId}/ingredients/${ingredientId}`, {
       method: 'DELETE',
     })
       .then(response => {

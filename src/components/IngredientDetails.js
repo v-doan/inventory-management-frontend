@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BASE_URL from '../config';
 
 const IngredientDetails = ({ ingredientId }) => {
   const [products, setProducts] = useState([]);
@@ -9,7 +10,7 @@ const IngredientDetails = ({ ingredientId }) => {
     if (ingredientId) {
       setLoading(true);
       setError(null);
-      fetch(`https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/ingredients/${ingredientId}/products`)
+      fetch(`${BASE_URL}/ingredients/${ingredientId}/products`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch ingredient details');

@@ -6,6 +6,7 @@ import IngredientList from './components/IngredientList';
 import ProductDetails from './components/ProductDetails';
 import IngredientDetails from './components/IngredientDetails';
 import Modal from './components/Modal';
+import BASE_URL from './config';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -15,12 +16,12 @@ function App() {
   const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
-    fetch('https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/products')
+    fetch(`${BASE_URL}/products`)
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching products:', error));
 
-    fetch('https://inventory-management-backend-f36ec1d11345.herokuapp.com/api/ingredients')
+      fetch(`${BASE_URL}/ingredients`)
       .then(response => response.json())
       .then(data => setIngredients(data))
       .catch(error => console.error('Error fetching ingredients:', error));
