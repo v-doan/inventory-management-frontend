@@ -37,8 +37,6 @@ Create a config.js file in the src directory with the following content:
     API_BASE_URL: process.env.REACT_APP_API_BASE_URL || "https://inventory-management-backend-f36ec1d11345.herokuapp.com/api",
     };
 
-    export default config;
-    
-    ```
+    export default config;```
 
 Make sure to set the REACT_APP_API_BASE_URL environment variable to the backend API URL when deploying.
