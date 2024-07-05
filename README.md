@@ -33,11 +33,12 @@ To get started with the front end, follow these steps:
 Create a config.js file in the src directory with the following content:
 
    ```javascript
-   const config = {
-    API_BASE_URL: process.env.REACT_APP_API_BASE_URL || "https://inventory-management-backend-f36ec1d11345.herokuapp.com/api",
-    };
+const config = {
+  API_BASE_URL: process.env.REACT_APP_API_BASE_URL || "https://inventory-management-backend-f36ec1d11345.herokuapp.com/api",
+};
 
-    export default config;
+export default config;
+```
 
 ## Usage
 To start the development server, run:
