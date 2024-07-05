@@ -1,111 +1,44 @@
-# Inventory Management System
+# Inventory Management Front End
 
-An inventory management system built with Spring Boot for the backend and React for the frontend. This application allows users to manage products and their ingredients.
+This is the front end application for the Inventory Management System. It is built using React.js and interacts with the backend API to manage products and ingredients.
 
 ## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [License](#license)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
 - [Contributing](#contributing)
-
-## Features
-
-- Add, update, and delete products
-- Manage ingredients for each product
-- View a list of all products and their ingredients
-
-## Tech Stack
-
-- Backend: Spring Boot, JPA, Hibernate
-- Frontend: React, Tailwind CSS
-- Database: MySQL
-- Deployment: Heroku
+- [License](#license)
 
 ## Installation
 
-### Prerequisites
-
-- Java 11 or higher
-- Node.js and npm
-- MySQL
-
-### Backend
+To get started with the front end, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/inventory-management.git
-   cd inventory-management/backend
+   ```sh
+   git clone https://github.com/<your_github_username>/inventory-management-frontend.git
 
+2. Navigate to the project directory::
 
-## Available Scripts
+   ```sh
+   cd inventory-management-frontend
+3. Install the dependencies:
 
-In the project directory, you can run:
+   ```sh
+   npm install
 
-### `npm start`
+## Installation
+Create a config.js file in the src directory with the following content:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```javascript
+   const config = {
+    API_BASE_URL: process.env.REACT_APP_API_BASE_URL || "https://inventory-management-backend-f36ec1d11345.herokuapp.com/api",
+    };
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    export default config;
+    
+    ```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Make sure to set the REACT_APP_API_BASE_URL environment variable to the backend API URL when deploying.
