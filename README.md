@@ -44,4 +44,13 @@ export default config;
 To start the development server, run:
    ```sh
    npm start
+```
+
+## Available scripts
+In the project directory, you can run:
+
+- npm start: Starts the development server.
+- npm test: Launches the test runner.
+- npm run build: Builds the app for production to the build folder.
+- npm run eject: Ejects the app (use with caution).
 
