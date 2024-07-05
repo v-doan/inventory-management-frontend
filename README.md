@@ -54,3 +54,34 @@ In the project directory, you can run:
 - npm run build: Builds the app for production to the build folder.
 - npm run eject: Ejects the app (use with caution).
 
+## Project structure
+The project structure is as follows:
+```sh
+   inventory-management-frontend/
+│
+├── public/
+│   ├── index.html
+│   └── ...
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Modal.js
+│   │   ├── ProductDetails.js
+│   │   ├── IngredientDetails.js
+│   │   ├── IngredientList.js
+│   │   ├── ProductList.js
+│   └── ...
+│   ├── config.js       # Configuration file for API base URL
+│   ├── App.js          # Main application component
+│   ├── index.js        # Main entry point
+│   ├── index.css       # Global styles
+│   ├── tailwind.config.js # Tailwind CSS configuration file
+│   └── ...
+│
+├── .env                # Environment variables
+├── README.md           # Project documentation
+├── package.json        # NPM dependencies and scripts
+└── ...
+
+```
