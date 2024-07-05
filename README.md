@@ -18,7 +18,7 @@ To get started with the front end, follow these steps:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/<your_github_username>/inventory-management-frontend.git
+   git clone https://github.com/v-doan/inventory-management-frontend.git
 
 2. Navigate to the project directory::
 
